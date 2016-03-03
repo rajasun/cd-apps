@@ -12,8 +12,6 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @RestController
 public class Application {
-
-	
     @Value("${db.pool.size}")
     String poolSize;
     
@@ -52,18 +50,10 @@ public class Application {
 	}
 
 	
-	String invokeUtilityService(String url)
-	{
-	   
-	     
+	String invokeUtilityService(String url)	{
 	    RestTemplate restTemplate = new RestTemplate();
 	    String result = restTemplate.getForObject(url, String.class);
-	     
 	    System.out.println(result);
-	    
 	    return result;
-		
 	}
-	
-	
 }

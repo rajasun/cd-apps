@@ -33,14 +33,14 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
-
-<!-- 			<plugin>
+			<plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>0.2.3</version>
 				<configuration>
 					<imageName>${image.prefix}/${project.artifactId}:v_${build.number}</imageName>
-					<dockerDirectory>complete/src/main/docker</dockerDirectory>
+					<dockerDirectory>complete/src/main/docker</dockerDirectory> 
+					<skipDockerBuild>true</skipDockerBuild>
 					<resources>
 						<resource>
 							<targetPath>/</targetPath>
@@ -49,11 +49,9 @@
 						</resource>
 					</resources>
 				</configuration>
-			</plugin> -->
+			</plugin>
 
-            
-
-              </plugins>    
+   </plugins>    
     <!-- tag::plugin[] -->		
         
     </build>
@@ -65,7 +63,5 @@
         <module>micro-service-4</module>            
         <module>micro-service-5</module> 
         <module>micro-service-6</module> 
-
     </modules>
-
 </project>

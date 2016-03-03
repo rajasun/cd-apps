@@ -34,9 +34,11 @@
 				<groupId>com.spotify</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>0.2.3</version>
+				
 				<configuration>
 					<imageName>${image.prefix}/${project.artifactId}:v_${build.number}</imageName>
 					<dockerDirectory>micro-service-1/src/main/docker</dockerDirectory>
+					<skipDockerBuild>false</skipDockerBuild>
 					<resources>
 						<resource>
 							<targetPath>/</targetPath>

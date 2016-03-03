@@ -36,6 +36,7 @@
 				<version>0.2.3</version>
 				<configuration>
 					<imageName>${image.prefix}/${project.artifactId}:v_${build.number}</imageName>
+					<skipDockerBuild>false</skipDockerBuild>
 					<dockerDirectory>micro-service-2/src/main/docker</dockerDirectory>
 					<resources>
 						<resource>

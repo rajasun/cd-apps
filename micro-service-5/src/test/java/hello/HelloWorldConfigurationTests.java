@@ -42,7 +42,6 @@ import static org.junit.Assert.assertEquals;
 @IntegrationTest("server.port=0")
 @DirtiesContext
 public class HelloWorldConfigurationTests {
-
 	@Value("${local.server.port}")
 	private int port;
 

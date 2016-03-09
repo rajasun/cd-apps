@@ -10,7 +10,6 @@ import java.util.Date;
 @SpringBootApplication
 @RestController
 public class Application {
-
 	@RequestMapping("/")
 	public String home() {
 		Date date = new Date();
@@ -18,9 +17,7 @@ public class Application {
 		return "Hello Docker World  -- ms6";
 	}
 
-
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}
-
 }

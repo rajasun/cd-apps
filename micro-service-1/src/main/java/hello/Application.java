@@ -48,7 +48,6 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 	}
 
-	
 	String invokeUtilityService(String url)	{
 	    RestTemplate restTemplate = new RestTemplate();
 	    String result = restTemplate.getForObject(url, String.class);

@@ -23,8 +23,7 @@ public class Application {
     
     @Value("${rabbit.ip}")
     String rabbitIp;
-    
-    
+
     @RequestMapping("/")
 	public String home() {
 		Date date = new Date();

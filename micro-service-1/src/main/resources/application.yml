@@ -9,15 +9,27 @@ spring:
     config:
       env: prod # optional
   profiles:
-    active: prod      
+    active: prod    
 
 ribbon:
   ServerListRefreshInterval: 1000
-
+    
 endpoints:
   health:
     sensitive: false
   restart:
     enabled: true
   shutdown:
-    enabled: true
+    enabled: true    
+
+# Default Application properties to work in unit test environment
+db:
+  url: default.db.url
+  pool:
+    size: 0
+    
+rabbit:
+  ip: default.rabbit.ip
+  
+ms2:
+  url: default.mse2.url:8090

@@ -17,6 +17,7 @@ public class Application {
 		return "Hello Docker World  -- ms3";
 	}
 
+
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}

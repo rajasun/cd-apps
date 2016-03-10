@@ -13,7 +13,7 @@ public class Application {
 	@RequestMapping("/")
 	public String home() {
 		Date date = new Date();
-		System.out.println("Microservice 3 invoked !!!" + date.toString());
+		System.out.println("Microservice 3 invoked !!" + date.toString());
 		return "Hello Docker World  -- ms3";
 	}
 

@@ -27,7 +27,7 @@ public class Application {
     @RequestMapping("/")
 	public String home() {
 		Date date = new Date();
-		System.out.println("Microservice 1 invoked  Updated for DEMO  !!" + date.toString());
+		System.out.println("Microservice 1 invoked  Updated for DEMO  !!!" + date.toString());
 		StringBuilder builder =  new StringBuilder();
 		builder.append("Hello from microservice 1..  Updated for DEMO !! \n");
 		builder.append("env variable :: \n");

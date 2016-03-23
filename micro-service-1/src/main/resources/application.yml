@@ -1,19 +1,6 @@
 server:
   port: 8080
-
-#TODO: figure out why I need this here and in bootstrap.yml
-spring:
-  application:
-    name: micro-service-1
-  cloud:
-    config:
-      env: prod # optional
-  profiles:
-    active: prod    
-
-ribbon:
-  ServerListRefreshInterval: 1000
-    
+  
 endpoints:
   health:
     sensitive: false

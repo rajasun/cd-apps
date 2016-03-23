@@ -1,11 +1,9 @@
 spring:
   application:
     name: micro-service-1
+  profiles:
+    active: dev
   cloud:
     config:
-      env: prod # optional
-      label: master # optional
-       #uri: http://localhost:8080 # optional
-      uri: http://ecs-loadbalancer-62113885.us-west-2.elb.amazonaws.com:8096 
-  profiles:
-    active: prod 
+      enabled: false
+     

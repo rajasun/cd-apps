@@ -15,7 +15,7 @@
  */
 package hello;
 
-import java.util.Map;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -29,8 +29,6 @@ import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
-import static org.junit.Assert.assertEquals;
-
 /**
  * Basic integration tests for service demo application.
  *
@@ -40,16 +38,18 @@ import static org.junit.Assert.assertEquals;
 @SpringApplicationConfiguration(classes = Application.class)
 @WebAppConfiguration
 @IntegrationTest("server.port=0")
-@DirtiesContext
 public class HelloWorldConfigurationTests {
+	static {
+		System.setProperty("spring.profiles.active", "dev");
+	}
 
 	@Value("${local.server.port}")
 	private int port;
 
 	@Test
 	public void testGreeting() throws Exception {
-		ResponseEntity<String> entity = new TestRestTemplate().getForEntity(
-				"http://localhost:" + this.port + "/", String.class);
+		ResponseEntity<String> entity = new TestRestTemplate().getForEntity("http://localhost:" + this.port + "/",
+				String.class);
 		assertEquals(HttpStatus.OK, entity.getStatusCode());
 	}
 

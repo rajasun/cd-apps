@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: micro-service-1
+  profiles:
+    active: dev
+  cloud:
+    config:
+      enabled: false
